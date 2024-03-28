@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark/Light</title>
+    <style>
+        
+        .heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main-heading{
+            text-align: center;
+        }
+        .theme-toggle{
+            height: 80px;
+            margin-left: 5px;
+        }
+        p{
+            font-size: 30px;
+        }
+        li{
+            font-size: 25px;
+        }
+        .scorpio{
+            display: block;
+            margin: 20px  auto;
+            width: 500px;
+        }
+        .sub-heading{
+            font-size: 25px;
+        }
+        .active{
+            border: 2px solid black;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .dark-theme{
+            background-color: black;
+            color: white;
+        }
+        .light-theme{
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body id="body" class="">
+
+    <img src="./image/dark.png" alt="dark" id="dark" class="theme-toggle active " id="dark" onclick="dark()"/> 
+
+    <img src="./image/light.png" alt="light" id="light" class="theme-toggle" id="light" onclick="light()"/>
+
+    <div class="container">
+        <h1 class="main-heading"> This is practice of Dark TO Light Mode  ☀️/🌙 </h1>
+
+        <img src="./image/light-off scorpio.png" alt="light on" class="scorpio" id="lightoff"/>
+        
+       <div class="heading">
+        <p>Car Name :-</p> &nbsp;&nbsp;&nbsp;
+        <H1>Scorpio classic</H1>
+       </div>
+
+        <p>Scorpio is a popular SUV (Sports Utility Vehicle) manufactured by Mahindra & Mahindra, an Indian automotive company. It was first introduced in 2002 and has since undergone several updates and iterations to keep up with market demands. The Scorpio is known for its robust build, powerful engine options, and rugged design, making it suitable for both urban and off-road driving.
+
+            <p class="sub-heading">Key features of the Scorpio typically include:</p>
+            <ol type="1">
+                <li>
+                    Engine Options: The Scorpio is usually available with a range of diesel engine options, offering varying power outputs and fuel efficiency.
+                </li>
+                <li>Design: It has a distinctive and muscular design, characterized by its bold grille, prominent wheel arches, and high ground clearance, giving it a commanding road presence.</li>
+                <li>
+                    Interior Comfort: Depending on the variant, the Scorpio offers comfortable seating for up to seven passengers, along with features such as touchscreen infotainment systems, climate control, and power accessories.
+                </li>
+                <li>
+                    Safety: Safety features in the Scorpio often include ABS (Anti-lock Braking System), dual front airbags, rear parking sensors, and a strong chassis construction.
+                </li>
+                <li>
+                    Off-road Capability: With its rugged construction and optional four-wheel-drive system, the Scorpio is capable of tackling rough terrain and adverse weather conditions.
+                </li>
+            </ol>
+            
+           </p>
+
+    </div>
+
+    <!-- functions -->
+<script>
+    function dark()
+    {
+        const carimage = document.getElementById('lightoff');
+        carimage.src = './image/light-on scorpio.png';
+
+        
+       const darkimage = document.getElementById('dark');
+       darkimage.classList.add("active");
+
+       const lightimage = document.getElementById('light');
+       lightimage.classList.remove("active");
+
+        const darktheme = document.getElementById('body');
+        darktheme.className = 'dark-theme';
+        
+    }
+
+    function light()
+    {
+        const carimage = document.getElementById('lightoff');
+        carimage.src = './image/light-off scorpio.png';
+
+        const darkimage = document.getElementById('dark');
+       darkimage.classList.remove("active");
+
+       const lightimage = document.getElementById('light');
+       lightimage.classList.add("active");
+
+       const lighttheme = document.getElementById('body');
+        lighttheme.className = 'light-theme';
+    }
+</script>
+    
+</body>
+</html>
